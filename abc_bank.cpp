@@ -199,7 +199,7 @@ int main()
 			break;
 		default: cout<<"Invalid choice, Try again"<<endl;
 		};
-		cout<<endl<<"do you want to go back to menu?"<<endl;
+		cout<<endl<<"Do you ant to return to menu?"<<endl;
 		cout<<"press y for yes and n for no"<<endl;
 		cin>>ch;
 		}while(ch=='y');
