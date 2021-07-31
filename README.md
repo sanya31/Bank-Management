@@ -1,11 +1,11 @@
 # Bank-Management System Menu
-    1.)Create Account
-    2.)Deposit Amount
-    3.)Withdraw Amount
-    4.)Close Account
-    5.)Check Account balance
-    6.)View all account holder's list
-    7.)Modify account
+    Create Account
+    Deposit Amount
+    Withdraw Amount
+    Close Account
+    Check Account balance
+    View all account holder's list
+    Modify account
     
     
  Using Binary File
