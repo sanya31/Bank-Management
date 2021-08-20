@@ -158,50 +158,55 @@ int main()
 	char ch;
 	//x = Menu choice number | n = Account number | ch = character accepted as 'y' or 'n' to return to Menu
 	cout<<"<><><><><><><>Welcome to ABC BANK<><><><><><><><><>"<<endl;
+	
 	do
 	{
 	system("cls");
 	cout<<"--------MENU---------"<<endl;
-	cout<<"1. Create new account"<<endl;
-	cout<<"2. Deposit amount"<<endl;
-	cout<<"3. Withdraw amount"<<endl;
-	cout<<"4. Check account balance"<<endl;
-	cout<<"5. View all account holder's list"<<endl;
-	cout<<"6. Close an account"<<endl;
-	cout<<"7. Modify account"<<endl;
+		cout<<"1. Create new account"<<endl;
+		cout<<"2. Deposit amount"<<endl;
+		cout<<"3. Withdraw amount"<<endl;
+		cout<<"4. Check account balance"<<endl;
+		cout<<"5. View all account holder's list"<<endl;
+		cout<<"6. Close an account"<<endl;
+		cout<<"7. Modify account"<<endl;
+		
 	cout<<endl<<"Submit choice: ";
 	cin>>x;
-	system("cls");
-	switch(x)
-	{
-		case 1: insert();
-			break;
-		case 2: cout<<"Enter account number"<<endl;
-			cin>>n;
-			deposit(n);
-			break;
-		case 3: cout<<"Enter account number"<<endl;
-			cin>>n;
-			withdraw(n);
-		case 4: cout<<"Enter account number"<<endl;
-			cin>>n;
-			search(n);
-			break;
-		case 5: show();
-			break;
-		case 6: cout<<"Enter account number"<<endl;
-			cin>>n;
-			close(n);
-			break;
-		case 7: cout<<"Enter account number"<<endl;
-			cin>>n;
-			modify(n);
-			break;
-		default: cout<<"Invalid choice, Try again"<<endl;
-		};
+		
+		system("cls");
+		switch(x)
+		{
+			case 1: insert();
+				break;
+			case 2: cout<<"Enter account number"<<endl;
+				cin>>n;
+				deposit(n);
+				break;
+			case 3: cout<<"Enter account number"<<endl;
+				cin>>n;
+				withdraw(n);
+			case 4: cout<<"Enter account number"<<endl;
+				cin>>n;
+				search(n);
+				break;
+			case 5: show();
+				break;
+			case 6: cout<<"Enter account number"<<endl;
+				cin>>n;
+				close(n);
+				break;
+			case 7: cout<<"Enter account number"<<endl;
+				cin>>n;
+				modify(n);
+				break;
+			default: cout<<"Invalid choice, Try again"<<endl;
+			};
+		
 		cout<<endl<<"Do you want to return to menu?"<<endl;
 		cout<<"press y for yes and n for no"<<endl;
 		cin>>ch;
 		}while(ch=='y');
-		
+	
+		return 0;
 		}
