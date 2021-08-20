@@ -12,7 +12,7 @@ class account
 
 	public:
 	long int deposit;
-	void create_acc()
+	void create_acc()				//To create a new account
 	{
 		cout<<"Enter account number: ";
 		cin>>acc_no;
@@ -27,7 +27,7 @@ class account
 		cout<<"Account created"<<endl;
 		}
 
-	void display()
+	void display()					//To display account details
 	{
 		cout<<"Account no: "<<acc_no<<endl;
 		cout<<"Account holder's name: "<<first_name<<" "<<last_name<<endl;
@@ -35,14 +35,14 @@ class account
 		cout<<"Balance: Rs "<<deposit<<endl;
 		
 		}
-	int acc_number()
+	int acc_number()				//Returns account number
 	{
 		return(acc_no);
 		}
 
 	};
 
-void insert()
+void insert()						//To write account details in binary file
 {
 	ofstream f;
 	f.open("abc bank.dat", ios::binary|ios::app);
@@ -52,7 +52,7 @@ void insert()
 	f.close();
 	}
 
-void show()
+void show()						//To read account details from binary file
 {
 	ifstream f;
 	f.open("abc bank.dat", ios::binary|ios::in);
@@ -64,7 +64,7 @@ void show()
 	f.close();
 	}
 
-void search(int n)
+void search(int n)					//Searching account by Account number
 {
 	ifstream f("abc bank.dat",ios::binary|ios::in);
 	account a;
@@ -77,7 +77,7 @@ void search(int n)
 	}
 	
 
-void deposit(int n)
+void deposit(int n)					//TO deposit sum: Searches the account in binary file and updates balance
 {       long int dep_amt,c;
 	account a;
 	cout<<"Enter the amount you want to deposit: ";
@@ -96,7 +96,7 @@ void deposit(int n)
 		rename("temp.dat", "abc bank.dat");
 		}
 
-void withdraw(int n)
+void withdraw(int n)					//TO withdraw amount: Searches the account in binary file and updates balance	
 {
 	long int withd_amt,c;
 	account a;
@@ -116,7 +116,7 @@ void withdraw(int n)
 		rename("temp.dat", "abc bank.dat");
 		}
 
-void close(int n)
+void close(int n)					//TO close the account : Searches the account in binary file and deletes it
 {
 	ofstream o("temp.dat",ios::binary|ios::app);
 	ifstream i("abc bank.dat",ios::binary|ios::in);
@@ -134,7 +134,7 @@ void close(int n)
 		cout<<"account closed successfully"<<endl;
 		}
 
-void modify(int n)
+void modify(int n)					//Modify account details
 {
 	ofstream o("temp.dat",ios::binary|ios::app);
 	ifstream i("abc bank.dat",ios::binary|ios::in);
@@ -154,9 +154,9 @@ void modify(int n)
 
 int main()
 {
-	account b;
 	int x, n;
 	char ch;
+	//x = Menu choice number | n = Account number | ch = character accepted as 'y' or 'n' to return to Menu
 	cout<<"<><><><><><><>Welcome to ABC BANK<><><><><><><><><>"<<endl;
 	do
 	{
